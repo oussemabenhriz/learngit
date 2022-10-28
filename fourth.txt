@@ -1,0 +1,112 @@
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ touch third.txt
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git init
+Initialized empty Git repository in C:/Users/asus/Desktop/learngit/.git/
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git add .
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git commit-m "adding third.txt"
+git: 'commit-m' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit-tree
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) f604c29] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git log
+commit f604c29325485bd3426556af5b4805a970125437 (HEAD -> master)
+Author: oussemabenhriz <oussemabenhariz33@gmail.com>
+Date:   Fri Oct 28 10:09:52 2022 +0100
+
+    adding third.txt
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ touch fourth.txt
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git add .
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git commit -m "adding fourth.txt"
+[master 7c6bdad] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git log
+commit 7c6bdad86f4b7e58a68c0c5d03875f28d0048657 (HEAD -> master)
+Author: oussemabenhriz <oussemabenhariz33@gmail.com>
+Date:   Fri Oct 28 10:13:41 2022 +0100
+
+    adding fourth.txt
+
+commit f604c29325485bd3426556af5b4805a970125437
+Author: oussemabenhriz <oussemabenhariz33@gmail.com>
+Date:   Fri Oct 28 10:09:52 2022 +0100
+
+    adding third.txt
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git rm third.txt
+rm 'third.txt'
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git add .
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git commit - "removing third.txt"
+error: pathspec '-' did not match any file(s) known to git
+error: pathspec 'removing third.txt' did not match any file(s) known to git
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git commit -m "removing third.txt"
+[master 21300b1] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git log
+commit 21300b11f62c0d4a93745ee03e46d5f6259a5c1f (HEAD -> master)
+Author: oussemabenhriz <oussemabenhariz33@gmail.com>
+Date:   Fri Oct 28 10:18:16 2022 +0100
+
+    removing third.txt
+
+commit 7c6bdad86f4b7e58a68c0c5d03875f28d0048657
+Author: oussemabenhriz <oussemabenhariz33@gmail.com>
+Date:   Fri Oct 28 10:13:41 2022 +0100
+
+    adding fourth.txt
+
+commit f604c29325485bd3426556af5b4805a970125437
+Author: oussemabenhriz <oussemabenhariz33@gmail.com>
+Date:   Fri Oct 28 10:09:52 2022 +0100
+
+    adding third.txt
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git remote add origin https://github.com/oussemabenhriz/learngit.git
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 647 bytes | 647.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/oussemabenhriz/learngit.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+asus@DESKTOP-GEK359K MINGW64 ~/Desktop/learngit (master)
